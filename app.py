@@ -125,12 +125,14 @@ class ScrapeWebsiteInput(BaseModel):
     objective: str = Field(
         description="The objective & task that users give to the agent")
     url: str = Field(description="The url of the website to be scraped")
+    skip_on_failure=True
 
 
 class ScrapeWebsiteTool(BaseTool):
     name = "scrape_website"
     description = "useful when you need to get data from a website url, passing both url and objective to the function; DO NOT make up any url, the url should only be from the search results"
     args_schema: Type[BaseModel] = ScrapeWebsiteInput
+    skip_on_failure=True
 
     def _run(self, objective: str, url: str):
         return scrape_website(objective, url)
