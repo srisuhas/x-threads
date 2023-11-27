@@ -20,8 +20,8 @@ from twit import tweeter
 from fastapi import FastAPI
 
 load_dotenv()
-brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
-serper_api_key = os.getenv("SERP_API_KEY")
+brwoserless_api_key = os.getenv("6760e808-fc89-43bd-be0e-c968cc5af25d")
+serper_api_key = os.getenv("9e9047b99ca6c4c17f649e1bbcfc48e710e83e3efc5f5c23c223e0be405e9d44")
 
 # 1. Tool for search
 
@@ -34,7 +34,7 @@ def search(query):
     })
 
     headers = {
-        'X-API-KEY': serper_api_key,
+        'X-API-KEY': dV9PtBKTxglAXXK18X6qC2CWz,
         'Content-Type': 'application/json'
     }
 
